@@ -1,0 +1,79 @@
+const RANDOM_TEXT = ["The tiger is the largest extant cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange-brown fur with a lighter underside. It is an apex predator, primarily preying on ungulates such as deer and wild boar.",
+"Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in",
+"Computer Science & Engineering (CSE) is an academic program at many universities which comprises scientific and engineering aspects of computing. CSE is also a term often used in Europe to translate discipline of informatics."];
+
+const text = document.getElementById("randomText");
+const inputTyping = document.getElementById("typing");
+const btn = document.getElementById("button");
+const response = document.getElementById("result");
+let word1,word2;
+let totalTimeInterval = 0;
+var timeinterval;
+let startTime, endTime;
+
+const startTyping = () =>{
+	let randomNumber = Math.floor(Math.random()*RANDOM_TEXT.length);
+	text.innerText = RANDOM_TEXT[randomNumber];
+	let time = new Date();
+	startTime = time.getTime();
+	button.innerText = "Stop";
+}
+
+
+const stopTyping = () => {
+	let time = new Date();
+	endTime = time.getTime();
+	let totalTime = ((endTime - startTime)/1000);
+	let totalWords = inputTyping.value;
+	let wordCount = WordCounter(totalWords);
+	let Speed = Math.round((wordCount/totalTime)*60);
+	let result = "Your Typing Speed is " +Speed+ " words per minutes ";
+	response.innerText = result;
+	window.clearInterval(timeinterval);
+}
+
+
+
+const WordCounter = (words) => {
+	let response = words.split(" ").length-1;
+	return response;
+}
+
+
+
+button.addEventListener('click', function () {
+	if (this.innerText == 'Start') {
+		typing.disabled = false;
+		startTyping();
+	}
+	else if (this.innerText == 'Stop') {
+		typing.disabled = true;
+		stopTyping();
+		btn.disabled = true;
+	}
+});
+
+
+function startTimer(){
+	var textAreaInput = typing.value.length;
+	if (textAreaInput ===0) {
+	timeinterval = setInterval(countTime,1000);
+	}
+}
+
+function countTime(){
+      ++totalTimeInterval;
+      var hour = Math.floor(totalTimeInterval/3600);
+      var minute = Math.floor((totalTimeInterval-hour*3600)/60);
+      var second = totalTimeInterval-(hour*3600+minute*60);
+	 document.getElementById("timer").innerText = (minute<10 ? '0' : '')+minute+ ":"+(second<10 ? '0' : '')+second;
+}
+
+
+function startAgain(){
+	window.location.reload();
+}
+
+function stopTimer(){
+	window.clearInterval(timeinterval);
+}
