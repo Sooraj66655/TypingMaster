@@ -38,11 +38,11 @@ const stopTyping = () => {
     result += compareWords(text.innerText, totalWords);
     response.innerText = result;
     window.clearInterval(timeinterval);
-}
+};
 
 /********************************************Words Counter***********************************/
 const WordCounter = (words) => {
-    let response = words.split(" ").length-1;
+    let response = words.split(" ").length - 1;
     return response;
 };
 
@@ -78,11 +78,11 @@ function startTimer() {
     debugger;
     var textAreaInput = inputTyping.value.length;
     if (flag == 0) {
-    if (textAreaInput == 0) {
-        btn.disabled = false;
-        timeinterval = setInterval(countTime, 1000);
-        flag ++;
-    }
+        if (textAreaInput == 0) {
+            btn.disabled = false;
+            timeinterval = setInterval(countTime, 1000);
+            flag++;
+        }
     }
 }
 function countTime() {
@@ -97,24 +97,27 @@ function countTime() {
 function match() {
     var rtext = text.innerText;
     var textValue = inputTyping.value;
-    var n = rtext.substring(0,textValue.length);
-    if (rtext ==  textValue) {
+    var n = rtext.substring(0, textValue.length);
+    if (rtext == textValue) {
         inputTyping.style.color = "black";
         document.getElementById("textfield").style.borderColor = "black";
         document.getElementById("success").style.display = "block";
+        document.getElementById("result").style.display = "block";
+
         stopTyping();
-       
-       
-    }else{
-     if (textValue == n) {
-        inputTyping.style.color = "green";
-        document.getElementById("textfield").style.borderColor = "green";
-        btn.disabled = true;
-    }
-    else{
-         inputTyping.style.color = "red";
-        document.getElementById("textfield").style.borderColor = "red";
-    }
+    } else {
+        if (textValue == n) {
+            inputTyping.style.color = "green";
+            document.getElementById("textfield").style.borderColor = "green";
+            btn.disabled = true;
+            document.getElementById("result").style.display = "none";
+            document.getElementById("success").style.display = "none";
+        } else {
+            inputTyping.style.color = "red";
+            document.getElementById("textfield").style.borderColor = "red";
+            document.getElementById("result").style.display = "none";
+            document.getElementById("success").style.display = "none";
+        }
     }
 }
 
