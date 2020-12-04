@@ -14,6 +14,7 @@ let word1, word2;
 let totalTimeInterval = 0;
 var timeinterval;
 let startTime, endTime;
+var flag = 0;
 
 /*************************************Start Function******************************/
 const startTyping = () => {
@@ -37,7 +38,7 @@ const stopTyping = () => {
     result += compareWords(text.innerText, totalWords);
     response.innerText = result;
     window.clearInterval(timeinterval);
-};
+}
 
 /********************************************Words Counter***********************************/
 const WordCounter = (words) => {
@@ -75,9 +76,12 @@ button.addEventListener("click", function () {
 /****************************************Start timer*****************************************/
 function startTimer() {
     var textAreaInput = typing.value.length;
-    if (textAreaInput === 0) {
+    if (flag == 0) {
+    if (textAreaInput == 0) {
         btn.disabled = false;
         timeinterval = setInterval(countTime, 1000);
+        flag ++;
+    }
     }
 }
 function countTime() {
@@ -93,13 +97,24 @@ function match() {
     var rtext = text.innerText;
     var textValue = inputTyping.value;
     var n = rtext.localeCompare(textValue);
-    if (n == 0) {
+    if (rtext ==  inputTyping) {
         inputTyping.style.color = "green";
+        document.getElementById("textfield").style.borderColor = "green";
+        window.clearInterval(timeinterval);
+       
+       
+    }else{
+     if (n == 0){
+        inputTyping.style.color = "green";
+        document.getElementById("textfield").style.borderColor = "green";
+        btn.disabled = true;
         window.clearInterval(timeinterval);
         stopTyping();
-        if (rtext === textValue) {
-            stopTimer();
-        }
+    }
+    else{
+         inputTyping.style.color = "red";
+        document.getElementById("textfield").style.borderColor = "red";
+    }
     }
 }
 
