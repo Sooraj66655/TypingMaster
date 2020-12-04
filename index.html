@@ -1,37 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <title>Typing Master!</title>
-  </head>
-  <body>
-    <header class="bg-dark text-center">
-      <h1 class="heading"><i class="fa fa-laptop" aria-hidden="true"></i>Typing Master<i class="fa fa-laptop" aria-hidden="true"></i></h1><p class="heading">Test Your Typing Speed Here...<i class="fa fa-keyboard-o" aria-hidden="true"></i></p></header>
-    <div class="container">
-      
-    	<p class="text-center"></p>
-      <p id="guide" onselectstart="return false" onCopy="return false" onCut="return false">This is typing test. Your <span style="color: red;"> Goal </span> is to <span style="color: red;">Dublicate</span> the provide text <span style="color: red;">Exactly</span>, in the textarea field Below.You Can type When You Click <span style="color: red;">Start</span>. The Timer will be Start When You Start <span style="color: red;">Typing.</span></p>
-      <div style="float: right;">
-        <span id="timer">00:00</span>
-      </div>
-    	<p id="randomText">Your Text Show Here When You Click <span style="color: red;">Start</span> for Typing.....</p>
-    <textarea class="form-control mx-auto" id="typing" rows="10" 
-      placeholder="Type here......." disabled="disabled" onkeypress="startTimer()" onfocusout="stopTimer()"  onpaste="return false;" onCopy="return false"></textarea>
-     <h3 id="result"></h3>
-    <div class="col text-center" style="margin-top: 5%;margin-bottom: 10%;">
-      <button class="btn btn-success" id="button">Start</button>
-      <button class="btn btn-success againBtn" onclick="startAgain();">Start Again!</button>
-    </div>
+        <title>Typing Master!</title>
+    </head>
+    <body>
+        <header class="bg-dark text-center">
+            <h1 class="heading"><i class="fa fa-laptop" aria-hidden="true"></i>Typing Master<i class="fa fa-laptop" aria-hidden="true"></i></h1>
+            <p class="heading">Test Your Typing Speed Here...<i class="fa fa-keyboard-o" aria-hidden="true"></i></p>
+        </header>
+        <div class="container">
+            <p class="text-center"></p>
 
+            <!-----------------------------------------Instruction------------------------------>
+            <p id="guide" onselectstart="return false" onCopy="return false" onCut="return false">
+                This is typing test. Your <span style="color: red;"> Goal </span> is to <span style="color: red;">Dublicate</span> the provide text <span style="color: red;">Exactly</span>, in the text field Below.You Can type When You
+                Click <span style="color: red;">Start</span>. The Timer will be Start When You Start <span style="color: red;">Typing.</span> and when You dublicate Exactly as Provide text then Timer Auto Stop And text will be <span style="color: green;">Green...</span> <br><span style="color: red;">Result</span> Will be Show Below of the text Field...<br> <span style="color: green;font-size: 50px;">All the Best!<span></span>
+            </p>
 
-     </div>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+            <!-----------------------------------------Timer---------------------------------------->
+            <div style="float: right;">
+                <span id="timer">00:00</span>
+            </div>
+
+            <!-------------------------------Random text---------------------------------------------->
+            <p id="randomText">Your Text Show Here When You Click <span style="color: red;">Start</span> for Typing.....</p>
+
+            <!----------------------------------typing Text Field------------------------------------->
+            <textarea class="form-control mx-auto" id="typing" rows="10" placeholder="Type here....." disabled="disabled" onkeypress="startTimer()" onpaste="return false;" onCopy="return false" onkeyup="match();"></textarea>
+
+            <!-------------------------------------Result WPM------------------------------------------>
+            <h3 id="result"></h3>
+
+            <!--------------------------------------Button--------------------------------------------->
+            <div class="col text-center" style="margin-top: 5%; margin-bottom: 10%;">
+                <button class="btn btn-success" id="button">Start</button>
+                <button class="btn btn-success againBtn" onclick="startAgain();">Start Again!</button>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="main.js"></script>
 </html>
