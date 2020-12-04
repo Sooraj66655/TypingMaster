@@ -75,7 +75,8 @@ button.addEventListener("click", function () {
 
 /****************************************Start timer*****************************************/
 function startTimer() {
-    var textAreaInput = typing.value.length;
+    debugger;
+    var textAreaInput = inputTyping.value.length;
     if (flag == 0) {
     if (textAreaInput == 0) {
         btn.disabled = false;
@@ -96,20 +97,18 @@ function countTime() {
 function match() {
     var rtext = text.innerText;
     var textValue = inputTyping.value;
-    var n = rtext.localeCompare(textValue);
-    if (rtext ==  inputTyping) {
-        inputTyping.style.color = "green";
-        document.getElementById("textfield").style.borderColor = "green";
-        window.clearInterval(timeinterval);
+    var n = rtext.substring(0,textValue.length);
+    if (rtext ==  textValue) {
+        inputTyping.style.color = "black";
+        document.getElementById("textfield").style.borderColor = "black";
+        stopTyping();
        
        
     }else{
-     if (n == 0){
+     if (textValue == n) {
         inputTyping.style.color = "green";
         document.getElementById("textfield").style.borderColor = "green";
         btn.disabled = true;
-        window.clearInterval(timeinterval);
-        stopTyping();
     }
     else{
          inputTyping.style.color = "red";
