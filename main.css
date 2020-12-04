@@ -68,4 +68,8 @@ i {
     font-size: 25px !important;
     width: auto !important;
 }
+#success{
+	font-size: 40px;
+	display: none;
+}
 
