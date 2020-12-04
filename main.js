@@ -32,7 +32,7 @@ const stopTyping = () => {
     let totalTime = (endTime - startTime) / 1000;
     let totalWords = inputTyping.value;
     let wordCount = WordCounter(totalWords);
-    let Speed = Math.round((wordCount / totalTime) * 60);
+    let Speed = Math.round((wordCount / totalTime) * 100);
     let result = "Your Typing Speed is " + Speed + " WPM ";
     response.innerText = result;
     result += compareWords(text.innerText, totalWords);
@@ -123,7 +123,7 @@ function startAgain() {
     window.location.reload();
 }
 
-/******************************************function for Stop Timer*********************************/
+/******************************************Function for Stop Timer*********************************/
 function stopTimer() {
     window.clearInterval(timeinterval);
 }
