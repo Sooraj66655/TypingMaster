@@ -24,6 +24,7 @@
                 This is typing test. Your <span style="color: red;"> Goal </span> is to <span style="color: red;">Dublicate</span> the provide text <span style="color: red;">Exactly</span>, in the text field Below.You Can type When You
                 Click <span style="color: red;">Start</span>. The Timer will be Start When You Start <span style="color: red;">Typing.</span> and when You dublicate Exactly as Provide text then Timer Auto Stop And text will be <span style="color: green;">Green...</span> <br><span style="color: red;">Result</span> Will be Show Below of the text Field...<br> <span style="color: green;font-size: 50px;">All the Best!<span></span>
             </p>
+            <p class="text-center text-danger" style="font-size: 40px;">Text Will be red untill You tpye Exactly..</p>
 
             <!-----------------------------------------Timer---------------------------------------->
             <div style="float: right;">
@@ -34,11 +35,12 @@
             <p id="randomText">Your Text Show Here When You Click <span style="color: red;">Start</span> for Typing.....</p>
 
             <!----------------------------------typing Text Field------------------------------------->
+            <div id="textfield">
             <textarea class="form-control mx-auto" id="typing" rows="10" placeholder="Type here....." disabled="disabled" onkeypress="startTimer()" onpaste="return false;" onCopy="return false" onkeyup="match();"></textarea>
-
+            </div>
             <!-------------------------------------Result WPM------------------------------------------>
             <h3 id="result"></h3>
-
+            
             <!--------------------------------------Button--------------------------------------------->
             <div class="col text-center" style="margin-top: 5%; margin-bottom: 10%;">
                 <button class="btn btn-success" id="button">Start</button>
