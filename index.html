@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="stylesheet" type="text/css" href="main.css" />
-         <link rel="icon" href="logo.png" type="image/icon type">
+       <link rel="icon" href="logo.png" type="image/icon type">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -23,29 +23,29 @@
             <!-----------------------------------------Instruction------------------------------>
             <p id="guide" onselectstart="return false" onCopy="return false" onCut="return false">
                 This is typing test. Your <span style="color: red;"> Goal </span> is to <span style="color: red;">Dublicate</span> the provide text <span style="color: red;">Exactly</span>, in the text field Below.You Can type When You
-                Click <span style="color: red;">Start</span>. The Timer will be Start When You Start <span style="color: red;">Typing.</span> and when You dublicate Exactly as Provide text then Timer Auto Stop And text will be <span style="color: green;">Green...</span> <br><span style="color: red;">Result</span> Will be Show Below of the text Field...<br> <span style="color: green;font-size: 50px;">All the Best!<span></span>
+                Click <span style="color: red;">Start</span>. The Timer will be Start When You Start <span style="color: red;">Typing.</span><br>if you typed anything wrong color will  be red and when You dublicate Exactly as Provide text  then Timer Auto Stop And text and text field border will be <span style="color: green;">Black...</span> <br><u>It's Rememberable that it's Case Sensitive</u><br><span style="color: red;">Result</span> Will be Show Below of the text Field...<br> <span style="color: green;font-size: 50px;">All the Best!<span></span>
             </p>
 
-            <!-----------------------------------------Timer---------------------------------------->
+            <!---------------------------------Timer---------------------------------------->
             <div style="float: right;">
                 <span id="timer">00:00</span>
             </div>
 
-            <!-------------------------------Random text---------------------------------------------->
+            <!-----------------------------Random text----------------------------------------->
             <p id="randomText">Your Text Show Here When You Click <span style="color: red;">Start</span> for Typing.....</p>
 
-            <!--------------------------------------Accuracy message--------------------------------->
+            <!-------------------------------Accuracy message--------------------------------->
             <div class="text-center" id="success"><i class="fa fa-check text-success" style="font-size: 60px;" aria-hidden="true"></i> All Correct Your Accuracy <span style="color:green;">100%</span></div>
 
-            <!----------------------------------typing Text Field------------------------------------->
+            <!------------------------------typing Text Field----------------------------->
 
             <div id="textfield">
             <textarea class="form-control mx-auto" id="typing" rows="10" placeholder="Type here....." disabled="disabled" onkeypress="startTimer()" onpaste="return false;" onCopy="return false" onkeyup="match();"></textarea>
             </div>
-            <!-------------------------------------Result WPM------------------------------------------>
+            <!---------------------------------Result WPM------------------------------------>
             <h3 id="result"></h3>
             
-            <!--------------------------------------Button--------------------------------------------->
+            <!----------------------------------Button--------------------------------------->
             <div class="text-center" style="margin-top: 5%; margin-bottom: 10%;">
                 <button class="btn btn-success col-md-6 col-sm-6" id="button">Start</button>
                 <button class="btn btn-success againBtn col-md-6 col-sm-6" onclick="startAgain();">Start Again!</button>
