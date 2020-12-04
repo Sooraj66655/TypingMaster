@@ -45,7 +45,7 @@ textarea {
     width: auto;
     font-weight: bold !important;
     font-size: 25px !important;
-    margin-right: 5% !important;
+
 }
 #result {
     font-size: 40px;
@@ -64,9 +64,6 @@ i {
     padding-right: 1% !important;
     font-weight: bold !important;
     font-size: 25px !important;
-    margin-left: 7% !important;
-    width: auto !importants;
+    width: auto !important;
 }
-.correct {
-    color: green !important;
-}
+
