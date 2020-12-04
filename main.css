@@ -38,6 +38,7 @@ textarea {
     font-size: 50px;
 }
 #button {
+	margin-top: 2% !important;
     padding-top: 1% !important;
     padding-bottom: 1% !important;
     padding-left: 4% !important;
@@ -59,6 +60,7 @@ i {
     color: red;
 }
 .againBtn {
+	margin-top: 2% !important;
     padding: 1% !important;
     padding-left: 1% !important;
     padding-right: 1% !important;
