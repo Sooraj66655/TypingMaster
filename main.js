@@ -29,6 +29,7 @@ const stopTyping = () => {
     let time = new Date();
     endTime = time.getTime();
     let totalTime = (endTime - startTime) / 1000;
+    console.log(totalTime);
     let totalWords = inputTyping.value;
     let wordCount = WordCounter(totalWords);
     let Speed = Math.round((wordCount / totalTime) * 60);
@@ -100,8 +101,8 @@ function match() {
     var textValue = inputTyping.value;
     var n = rtext.substring(0, textValue.length);
     if (rtext == textValue) {
-        inputTyping.style.color = "black";
-        document.getElementById("textfield").style.borderColor = "black";
+        inputTyping.style.color = "orange";
+       /* document.getElementById("textfield").style.borderColor = "black";*/
         document.getElementById("success").style.display = "block";
         document.getElementById("result").style.display = "block";
 
@@ -109,14 +110,14 @@ function match() {
     } else {
         if (textValue == n) {
             inputTyping.style.color = "green";
-            document.getElementById("textfield").style.borderColor = "green";
+           /* document.getElementById("textfield").style.borderColor = "green";*/
             btn.disabled = true;
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
             
         } else {
-            inputTyping.style.color = "red";
-            document.getElementById("textfield").style.borderColor = "red";
+            inputTyping.style.color = "#950309";
+           /* document.getElementById("textfield").style.borderColor = "red";*/
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
             
