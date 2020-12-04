@@ -3,8 +3,10 @@ const RANDOM_TEXT = [
     "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in",
     "Computer Science & Engineering (CSE) is an academic program at many universities which comprises scientific and engineering aspects of computing. CSE is also a term often used in Europe to translate discipline of informatics.",
     "The School is the place Where we learn",
-    "This is typing master",
+    "This is typing master","Change the world by being yourself","Never regret anything that made you smile","Aspire to inspire before we expire.",
+    "Spread love everywhere you go","Always remember that you are absolutely unique.","The purpose of our lives is to be happy.","A problem is a chance for you to do your best."
 ];
+
 
 const text = document.getElementById("randomText");
 const inputTyping = document.getElementById("typing");
