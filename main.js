@@ -7,7 +7,6 @@ const RANDOM_TEXT = [
     "Spread love everywhere you go","Always remember that you are absolutely unique.","The purpose of our lives is to be happy.","A problem is a chance for you to do your best."
 ];
 
-
 const text = document.getElementById("randomText");
 const inputTyping = document.getElementById("typing");
 const btn = document.getElementById("button");
@@ -22,8 +21,6 @@ var flag = 0;
 const startTyping = () => {
     let randomNumber = Math.floor(Math.random() * RANDOM_TEXT.length);
     text.innerText = RANDOM_TEXT[randomNumber];
-    let time = new Date();
-    startTime = time.getTime();
     button.innerText = "Stop";
 };
 
@@ -34,7 +31,7 @@ const stopTyping = () => {
     let totalTime = (endTime - startTime) / 1000;
     let totalWords = inputTyping.value;
     let wordCount = WordCounter(totalWords);
-    let Speed = Math.round((wordCount / totalTime) * 100);
+    let Speed = Math.round((wordCount / totalTime) * 60);
     let result = "Your Typing Speed is " + Speed + " WPM ";
     response.innerText = result;
     result += compareWords(text.innerText, totalWords);
@@ -44,7 +41,7 @@ const stopTyping = () => {
 
 /********************************************Words Counter***********************************/
 const WordCounter = (words) => {
-    let response = words.split(" ").length - 0.3;
+    let response = words.split(" ").length;
     return response;
 };
 
@@ -81,6 +78,8 @@ function startTimer() {
     var textAreaInput = inputTyping.value.length;
     if (flag == 0) {
         if (textAreaInput == 0) {
+             let time = new Date();
+             startTime = time.getTime();
             btn.disabled = false;
             timeinterval = setInterval(countTime, 1000);
             flag++;
@@ -114,11 +113,13 @@ function match() {
             btn.disabled = true;
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
+            
         } else {
             inputTyping.style.color = "red";
             document.getElementById("textfield").style.borderColor = "red";
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
+            
         }
     }
 }
