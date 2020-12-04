@@ -16,21 +16,31 @@ body {
 }
 #timer {
     font-size: 40px;
-    color: black;
+    color: #036028;
     font-weight: bold;
     text-align-last: right;
     text-shadow: 1px 1px #ff0000 !important;
 }
 #randomText {
     font-size: 20px;
-    color: #060251;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: #ffffff;
     font-weight: bold;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 textarea {
     font-size: 20px !important;
-    
+    background-color: grey !important;
+    border: none !important;
+    font-size: 30px !important;
+    text-align: center !important;
     outline: none !important;
 }
+
 #textfield{
 	border: 20px solid grey;
 }
