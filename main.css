@@ -28,8 +28,11 @@ body {
 }
 textarea {
     font-size: 20px !important;
-    border: 20px solid grey !important;
+    
     outline: none !important;
+}
+#textfield{
+	border: 20px solid grey;
 }
 .time {
     font-size: 50px;
@@ -43,6 +46,7 @@ textarea {
 }
 #result {
     color: red;
+    font-size: 40px;
     padding-left: 25%;
     padding-right: 25%;
     padding-top: 5%;
