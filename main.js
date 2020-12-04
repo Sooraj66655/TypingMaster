@@ -42,7 +42,7 @@ const stopTyping = () => {
 
 /********************************************Words Counter***********************************/
 const WordCounter = (words) => {
-    let response = words.split(" ").length;
+    let response = words.split(" ").length-1;
     return response;
 };
 
