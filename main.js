@@ -101,6 +101,7 @@ function match() {
     if (rtext ==  textValue) {
         inputTyping.style.color = "black";
         document.getElementById("textfield").style.borderColor = "black";
+        document.getElementById("success").style.display = "block";
         stopTyping();
        
        
