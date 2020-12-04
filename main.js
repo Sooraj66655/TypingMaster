@@ -95,7 +95,7 @@ function countTime() {
     document.getElementById("timer").innerText = (minute < 10 ? "0" : "") + minute + ":" + (second < 10 ? "0" : "") + second;
 }
 
-/****************************************Match Words ******************************************/
+/****************************************Match Words *****************************************/
 function match() {
     var rtext = text.innerText;
     var textValue = inputTyping.value;
