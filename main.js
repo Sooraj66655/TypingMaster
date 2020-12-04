@@ -123,7 +123,7 @@ function startAgain() {
     window.location.reload();
 }
 
-/******************************************Function for Stop Timer*********************************/
+/******************************************function for Stop Timer*********************************/
 function stopTimer() {
     window.clearInterval(timeinterval);
 }
