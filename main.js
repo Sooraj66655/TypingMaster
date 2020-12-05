@@ -95,13 +95,13 @@ function countTime() {
     document.getElementById("timer").innerText = (minute < 10 ? "0" : "") + minute + ":" + (second < 10 ? "0" : "") + second;
 }
 
-/****************************************Match Words *****************************************/
+/****************************************Match Words ******************************************/
 function match() {
     var rtext = text.innerText;
     var textValue = inputTyping.value;
     var n = rtext.substring(0, textValue.length);
     if (rtext == textValue) {
-        inputTyping.style.color = "orange";
+        inputTyping.style.color = "black";
        /* document.getElementById("textfield").style.borderColor = "black";*/
         document.getElementById("success").style.display = "block";
         document.getElementById("result").style.display = "block";
