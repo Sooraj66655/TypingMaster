@@ -3,8 +3,8 @@ const RANDOM_TEXT = [
     "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in",
     "Computer Science & Engineering (CSE) is an academic program at many universities which comprises scientific and engineering aspects of computing. CSE is also a term often used in Europe to translate discipline of informatics.",
     "The School is the place Where we learn",
-    "This is typing master","Change the world by being yourself","Never regret anything that made you smile","Aspire to inspire before we expire.",
-    "Spread love everywhere you go","Always remember that you are absolutely unique.","The purpose of our lives is to be happy.","A problem is a chance for you to do your best."
+    "This is typing master", "Change the world by being yourself", "Never regret anything that made you smile", "Aspire to inspire before we expire.",
+    "Spread love everywhere you go", "Always remember that you are absolutely unique.", "The purpose of our lives is to be happy.", "A problem is a chance for you to do your best."
 ];
 
 const text = document.getElementById("randomText");
@@ -79,14 +79,15 @@ function startTimer() {
     var textAreaInput = inputTyping.value.length;
     if (flag == 0) {
         if (textAreaInput == 0) {
-             let time = new Date();
-             startTime = time.getTime();
+            let time = new Date();
+            startTime = time.getTime();
             btn.disabled = false;
             timeinterval = setInterval(countTime, 1000);
             flag++;
         }
     }
 }
+
 function countTime() {
     ++totalTimeInterval;
     var hour = Math.floor(totalTimeInterval / 3600);
@@ -102,7 +103,7 @@ function match() {
     var n = rtext.substring(0, textValue.length);
     if (rtext == textValue) {
         inputTyping.style.color = "black";
-       /* document.getElementById("textfield").style.borderColor = "black";*/
+        /* document.getElementById("textfield").style.borderColor = "black";*/
         document.getElementById("success").style.display = "block";
         document.getElementById("result").style.display = "block";
 
@@ -110,17 +111,17 @@ function match() {
     } else {
         if (textValue == n) {
             inputTyping.style.color = "green";
-           /* document.getElementById("textfield").style.borderColor = "green";*/
+            /* document.getElementById("textfield").style.borderColor = "green";*/
             btn.disabled = true;
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
-            
+
         } else {
             inputTyping.style.color = "#950309";
-           /* document.getElementById("textfield").style.borderColor = "red";*/
+            /* document.getElementById("textfield").style.borderColor = "red";*/
             document.getElementById("result").style.display = "none";
             document.getElementById("success").style.display = "none";
-            
+
         }
     }
 }
