@@ -36,7 +36,7 @@ textarea {
     font-size: 20px !important;
     background-color: grey !important;
     border: none !important;
-    font-size: 30px !important;
+    font-size: 40px !important;
     text-align: center !important;
     outline: none !important;
 }
@@ -85,5 +85,12 @@ i {
 #success{
 	font-size: 40px;
 	display: none;
+}
+footer{
+	height: 100%;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	width: 100%;
+	background-color: black;
 }
 
