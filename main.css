@@ -8,6 +8,9 @@ body {
 	padding-top: 1% !important;
 	padding-bottom: 1% !important;
 }
+header{
+	border-bottom: 2px solid 
+}
 
 #guide {
 	padding-top: 4%;
@@ -66,6 +69,9 @@ textarea {
 	font-weight: bold !important;
 	font-size: 25px !important;
 }
+#button:hover{
+	color: white !important;
+}
 
 #result {
 	font-size: 40px;
@@ -90,6 +96,9 @@ i {
 	font-weight: bold !important;
 	font-size: 25px !important;
 	width: auto !important;
+}
+.againBtn:hover{
+	color: white !important;
 }
 
 #success {
