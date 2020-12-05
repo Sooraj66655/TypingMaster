@@ -64,7 +64,7 @@ const compareWords = (string1, string2) => {
 button.addEventListener("click", function () {
     if (this.innerText == "Start") {
         typing.disabled = false;
-        btn.disabled = true;
+        document.getElementById("button").style.display = "none";
         startTyping();
     } else if (this.innerText == "Stop") {
         typing.disabled = true;
@@ -81,7 +81,7 @@ function startTimer() {
         if (textAreaInput == 0) {
             let time = new Date();
             startTime = time.getTime();
-            btn.disabled = false;
+            /*btn.disabled = false;*/
             timeinterval = setInterval(countTime, 1000);
             flag++;
         }
