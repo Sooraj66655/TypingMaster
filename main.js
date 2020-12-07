@@ -64,18 +64,19 @@ const compareWords = (string1, string2) => {
 button.addEventListener("click", function () {
     if (this.innerText == "Start") {
         typing.disabled = false;
+        typing.focus();
         document.getElementById("button").style.display = "none";
         startTyping();
-    } else if (this.innerText == "Stop") {
+    }/* else if (this.innerText == "Stop") {
         typing.disabled = true;
         btn.disabled = true;
         stopTyping();
-    }
+    }*/
 });
 
 /****************************************Start timer*****************************************/
 function startTimer() {
-    debugger;
+    /*debugger;*/
     var textAreaInput = inputTyping.value.length;
     if (flag == 0) {
         if (textAreaInput == 0) {
